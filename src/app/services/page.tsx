@@ -176,7 +176,7 @@ export default function ServicesPage() {
                       </div>
                       <div>
                         <p className="text-xs text-white/60">Call for quick deployment</p>
-                        <p className="font-semibold">+91 99999 99999</p>
+                        <p className="font-semibold">+91 9991865220</p>
                       </div>
                     </div>
                   </div>
@@ -224,7 +224,7 @@ export default function ServicesPage() {
             <Link href="/contact" className="btn-accent px-8 py-3.5 text-base" id="services-get-quote">
               Get Free Quote
             </Link>
-            <a href="tel:+919999999999" className="btn-outline px-8 py-3.5 text-base" id="services-call-now">
+            <a href="tel:+919991865220" className="btn-outline px-8 py-3.5 text-base" id="services-call-now">
               Call Us Now
             </a>
           </div>

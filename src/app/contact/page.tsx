@@ -16,8 +16,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Call / WhatsApp",
-    value: "+91 99999 99999",
-    href: "tel:+919999999999",
+    value: "+91 9991865220",
+    href: "tel:+919991865220",
     color: "text-blue-600 bg-blue-50",
   },
   {
@@ -122,7 +122,7 @@ export default function ContactPage() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/919999999999?text=Hello%2C%20I%20need%20manpower%20services."
+                href="https://wa.me/919991865220?text=Hello%2C%20I%20need%20manpower%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 id="contact-whatsapp-btn"
@@ -158,7 +158,7 @@ export default function ContactPage() {
                 <div className="bg-white rounded-3xl p-10 animate-pulse">
                   <div className="h-8 bg-slate-100 rounded w-1/2 mx-auto mb-6" />
                   <div className="space-y-4">
-                    {[1,2,3,4].map(i => <div key={i} className="h-12 bg-slate-100 rounded-xl" />)}
+                    {[1, 2, 3, 4].map(i => <div key={i} className="h-12 bg-slate-100 rounded-xl" />)}
                   </div>
                 </div>
               }>

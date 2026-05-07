@@ -5,7 +5,7 @@ export default function StickyCTA() {
     <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
       {/* WhatsApp */}
       <a
-        href="https://wa.me/919999999999?text=Hello%2C%20I%20need%20manpower%20services."
+        href="https://wa.me/919991865220?text=Hello%2C%20I%20need%20manpower%20services."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
@@ -24,7 +24,7 @@ export default function StickyCTA() {
 
       {/* Call Now */}
       <a
-        href="tel:+919999999999"
+        href="tel:+919991865220"
         aria-label="Call Now"
         className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 shadow-lg shadow-blue-500/40 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-110 transition-all duration-200"
       >
