@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #1e40af;
+  --primary-dark: #1e3a8a;
+  --primary-light: #3b82f6;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --dark: #0f172a;
+  --dark-2: #1e293b;
+  --text-muted: #64748b;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Animated gradient hero */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sticky CTA buttons */
+.sticky-cta {
+  position: fixed;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Pulse ring */
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  animation: pulseRing 1.5s ease-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400
+    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+    transition-all duration-200 text-sm;
+}
+
+.form-label {
+  @apply block text-sm font-semibold text-slate-700 mb-1.5;
+}
+
+.form-error {
+  @apply text-red-500 text-xs mt-1 flex items-center gap-1;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl
+    transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5
+    active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none;
+}
+
+.btn-accent {
+  @apply bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-xl
+    transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/30 hover:-translate-y-0.5
+    active:translate-y-0;
+}
+
+.btn-outline {
+  @apply border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-6 py-3 rounded-xl
+    transition-all duration-200;
+}
+
+/* Section headings */
+.section-badge {
+  @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-4;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-slate-900 mb-4;
+}
+
+.section-subtitle {
+  @apply text-lg text-slate-500 max-w-2xl;
+}
+
+/* Card hover effects */
+.service-card {
+  @apply bg-white rounded-2xl p-6 shadow-sm border border-slate-100 
+    hover:shadow-xl hover:shadow-blue-100/50 hover:-translate-y-1
+    transition-all duration-300 cursor-default;
+}
+
+/* Nav active state */
+.nav-link {
+  @apply text-slate-600 hover:text-blue-700 font-medium transition-colors duration-200 relative;
+}
+
+.nav-link.active {
+  @apply text-blue-700;
+}
